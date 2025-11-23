@@ -1,0 +1,206 @@
+/* Footer styles - Contact information, social links, and site footer */
+
+.footer {
+  background-color: var(--bg-dark);
+  color: var(--text-light, white);
+  padding: 1rem 0;
+  /* margin-top: var(--spacing-xxl); */
+  text-align: center;
+
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+/* Footer sections */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section h3 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--secondary-color);
+  border-radius: 1px;
+}
+
+.footer-section p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Footer links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color);
+}
+
+.footer-links .icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Contact information */
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--secondary-color);
+  flex-shrink: 0;
+}
+
+.contact-text {
+  flex: 1;
+}
+
+.contact-text a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-text a:hover {
+  color: var(--secondary-color);
+}
+
+
+.footer-social {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Espaço entre os ícones */
+}
+
+
+.social-icon a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Tamanho do círculo do ícone */
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icon a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Tamanho do círculo do ícone */
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(192, 62, 62, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icon a:hover {
+    background-color: var(--primary-color, #007bff);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(127, 128, 129, 0.4);
+}
+
+.social-icon img {
+    width: 30px; /* Tamanho do ícone SVG */
+    height: 30px;
+    filter: brightness(0) invert(1); /* Deixa o SVG branco */
+    transition: transform 0.3s ease;
+}
+
+.social-icon a:hover img {
+    transform: scale(1.1);
+}
+
+/* Estilos específicos por rede social (opcional) */
+.social-icon a[aria-label="GitHub"]:hover {
+    background-color: #333;
+}
+
+.social-icon a[aria-label="LinkedIn"]:hover {
+    background-color: #00263a;
+}
+
+.social-icon a[aria-label="Kaggle"]:hover {
+    background-color: #1da1f2;
+}
+
+.social-icon a[aria-label="orcId"]:hover {
+    background-color: #0c7e01;
+}
+
+.social-icon.linkedin:hover {
+  background-color: #0077b5;
+}
+
+.social-icon.github:hover {
+  background-color: #333;
+}
+
+.social-icon.kaggle:hover {
+  background-color: #1da1f2;
+}
+
+.social-icon.orcId:hover {
+  background-color: #035a07;
+}
+
+/* Empurra o footer para o final da página */
+#footer-placeholder {
+  margin-top: auto;
+}

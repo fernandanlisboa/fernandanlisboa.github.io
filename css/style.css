@@ -1,0 +1,12 @@
+/* Arquivo principal que une todos os outros */
+
+@import url('_base.css');
+@import url('_about.css'); /* <-- adicionar este */
+@import url('_header.css');
+@import url('_experience.css');
+@import url('_projects.css');
+@import url('_publications.css');
+@import url('_animations.css');
+@import url('_responsive.css');
+@import url('_footer.css');
+@import url('_nav.css');

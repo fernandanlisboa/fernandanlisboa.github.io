@@ -1,0 +1,74 @@
+.about{
+    min-height: calc(100vh - var(--header-height)); /* ocupa tela toda menos o header */
+    padding: var(--spacing-xl) 0;
+    padding-top: calc(var(--spacing-xl) + 2rem);
+    background-color: var(--bg-light);
+    display: flex;
+    align-items: center;
+}
+
+.about .container {
+    width: 100%;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 260px 1fr; /* foto + texto */
+    gap: var(--spacing-xl);
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left; /* texto alinhado à esquerda */
+}
+
+/* Foto circular com placeholder cinza */
+.about-photo {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: #ddd;               /* placeholder caso a imagem não carregue */
+    border: 2px solid var(--border-color);
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* opcional: estilo quando cair no fallback */
+.about-photo.placeholder { background: #ddd; }
+
+/* Conteúdo de texto */
+.about-info {
+    color: var(--text-color);
+}
+
+.about-title {
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Espaçamento entre parágrafos */
+.about-info p + p {
+    margin-top: var(--spacing-sm);
+}
+
+/* Responsivo: empilha no mobile e centraliza a foto */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: left;
+    }
+
+    .about-photo {
+        margin: 0 auto; /* centraliza a foto no mobile */
+        width: 140px;
+        height: 140px;
+    }
+}
